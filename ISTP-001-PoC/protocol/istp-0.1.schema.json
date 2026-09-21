@@ -1,0 +1,15 @@
+{
+  "protocol": "ISTP",
+  "version": "0.1",
+  "purpose": "Verify an inter-system transition without sharing internal databases, ontology, or decision engine.",
+  "layers": ["SEMANTIC_MAPPING", "AUTHENTICITY", "AUTHORITY", "TEMPORAL", "CONTESTATION", "PROVENANCE"],
+  "invariants": [
+    "A signature proves origin/integrity, not legal correctness.",
+    "A mapping may be partial and MUST declare preserved/lost/rejected fields.",
+    "Decision time, valid time, and knowledge time are distinct.",
+    "A later correction MUST NOT silently rewrite the historical decision context.",
+    "Contradictions are preserved as signed assertions; the transport layer does not elect a winner.",
+    "Authority verification is scoped to issuer, role, jurisdiction, action, and validity interval.",
+    "The receiver MUST be able to reject a transition deterministically when a declared invariant fails."
+  ]
+}
